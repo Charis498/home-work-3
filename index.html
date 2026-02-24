@@ -50,7 +50,7 @@
           <div class="hero-info">
             <h2>Косметологічна клініка</h2>
             <h1>Beauty Zone</h1>
-            <button class="btn">Замовити дзвінок</button>
+            <button id="openModal" class="btn">Замовити дзвінок</button>
             <p>
               Запишись та отримай безкоштовну<br />консультацію нашого
               косметолога
@@ -79,6 +79,11 @@
           </p>
         </div>
         <div class="two-girls">
+          <div class="star">
+            <img class="star1" src="./img/Star 1.svg" alt="star" />
+            <img class="star2" src="./img/Star 2.svg" alt="star2" />
+            <img class="star3" src="./img/Star 3.svg" alt="star3" />
+          </div>
           <img class="wooman1" src="img/woman1.png" alt="woman1" />
           <img class="wooman2" src="img/woman2.png" alt="woman2" />
         </div>
@@ -181,16 +186,24 @@
                 class="input"
                 type="text"
                 placeholder="Ваше ім'я та прізвище"
+                pattern="[А-Яа-яЁёІіЇїЄєҐґA-Za-z]+\s[А-Яа-яЁёІіЇїЄєҐґA-Za-z]+"
+                title="Введіть ім'я та прізвище через пробіл"
+                required
               />
               <input
                 class="input"
                 type="tel"
                 placeholder="Ваш номер телефону"
+                pattern="\+380[0-9]{9}"
+                title="Введіть номер у форматі +380XXXXXXXXX"
+                required
               />
               <input
                 class="input"
                 type="email"
                 placeholder="Ваша електронна пошта"
+                title="Введіть пошту у форматі example@mail.com"
+                required
               />
               <button class="btn_details">Записатись безкоштовно</button>
               <p>
@@ -263,12 +276,47 @@
         </div>
       </footer>
     </div>
-    <div class="dialog">
-      <div class="modal">
-        <form action=""></form>
+    <div id="myModal" class="modal">
+      <div class="modal_content">
+        <div class="content">
+          <h2>Замовити дзвінок</h2>
+          <h3>
+            Запишіться <span>безкоштовно</span> <br />
+            та отримайте подарунок
+          </h3>
+
+          <input
+            type="text"
+            placeholder="Ваше ім'я та прізвище"
+            pattern="[А-Яа-яЁёІіЇїЄєҐґA-Za-z]+\s[А-Яа-яЁёІіЇїЄєҐґA-Za-z]+"
+            title="Введіть ім'я та прізвище через пробіл"
+            class="modal_input"
+            required
+          />
+          <input
+            type="tel"
+            placeholder="Ваш номер телефону"
+            pattern="\+380[0-9]{9}"
+            title="Введіть номер у форматі +380XXXXXXXXX"
+            class="modal_input"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Ваша електронна пошта"
+            title="Введіть пошту у форматі example@mail.com"
+            class="modal_input"
+            required
+          />
+          <button class="modal_btn">Записатись безкоштовно</button>
+          <p>
+            Натискаючи на кнопку я погоджуюсь <br />з політикою конфіденційності
+          </p>
+        </div>
+        <span class="close-btn">&times;</span>
       </div>
     </div>
 
-    <script src="./js/dialog.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
