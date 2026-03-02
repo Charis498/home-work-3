@@ -78,8 +78,7 @@ img {
   width: 100%;
   height: 106px;
 }
-
-.container {
+f .container {
   max-width: 1288px;
   margin: 0 auto;
   padding: 0 24px;
@@ -90,11 +89,12 @@ header {
   padding: 32px 0;
   z-index: 2;
   position: relative;
-  backdrop-filter: blur(10px);
 }
 
 .navigation {
   display: flex;
+  padding: 0 101px 32px 101px;
+  justify-content: center;
 }
 
 .navigation .logo {
@@ -108,6 +108,7 @@ header {
   align-items: center;
   flex-grow: 1;
   justify-content: center;
+  padding: 0 240px;
 }
 
 .navigation .menu ul {
@@ -223,7 +224,8 @@ header {
   position: relative;
   margin-top: 113px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 32px;
 }
 
 .reincarnation h2 {
@@ -305,9 +307,12 @@ header {
   padding-bottom: 200px;
 }
 
-.why-us {
+.wave-2 {
   background-image: url(../img/background.svg);
   background-size: cover;
+}
+
+.why-us {
   padding-top: 176px;
   padding-bottom: 96px;
 }
@@ -386,20 +391,64 @@ header {
   fill: var(--color-primary-dark);
 }
 
+.arrow-button-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  rotate: 180deg;
+}
+
+.arrow-button-1 svg {
+  fill: var(--color-primary-dark);
+}
+
 .format_card {
-  border-radius: 4px 120px;
   width: 344px;
   height: 456px;
-  background: linear-gradient(
-    180deg,
-    rgba(1, 28, 68, 0) 47.4%,
-    rgba(1, 28, 68, 0.73) 82.66%,
-    #011c44 99.06%
-  );
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 32px 77px;
+}
+
+.mask {
+  border-radius: 4px 120px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(1, 28, 68, 0) 47.4%,
+      rgba(1, 28, 68, 0.73) 82.66%,
+      #011c44 99.06%
+    ),
+    url(../img/image\ 1580.png);
+}
+
+.injections {
+  border-radius: 4px 120px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(1, 28, 68, 0) 47.4%,
+      rgba(1, 28, 68, 0.73) 82.66%,
+      #011c44 99.06%
+    ),
+    url(../img/image\ 1570.png);
+}
+
+.clean {
+  border-radius: 4px 120px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(1, 28, 68, 0) 47.4%,
+      rgba(1, 28, 68, 0.73) 82.66%,
+      #011c44 99.06%
+    ),
+    url(../img/image\ 1574.png);
 }
 
 .format-card_txt {
@@ -428,7 +477,7 @@ h2 span {
 
 .find_us_deteails {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 32px;
 }
 
@@ -502,9 +551,8 @@ h3 span {
   margin-top: 96px;
   padding: 56px 100px;
   background:
-    url(../img/background_footer.svg),
-    url(../img/PhotoRoom\ 1.svg) bottom right no-repeat
-      var(--color-primary-dark);
+    url(../img/PhotoRoom\ 1.svg) bottom right no-repeat,
+    url(../img/background_footer.svg) var(--color-primary-dark);
 }
 .footer-logo {
   font-weight: 700;
