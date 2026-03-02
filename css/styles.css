@@ -150,7 +150,7 @@ header {
 }
 
 .hero {
-  padding-top: 123px;
+  padding: 123px 0 0 205px;
   background-image:
     linear-gradient(
       89.38deg,
@@ -387,8 +387,19 @@ header {
   background-color: transparent;
 }
 
+.arrow-button:hover {
+  background-color: var(--color-primary-light);
+  transition: background-color 0.3s ease;
+  border-color: var(--color-white);
+}
+
 .arrow-button svg {
   fill: var(--color-primary-dark);
+}
+
+.arrow-button:hover svg {
+  fill: var(--color-white);
+  transition: fill 0.3s ease;
 }
 
 .arrow-button-1 {
@@ -402,8 +413,19 @@ header {
   rotate: 180deg;
 }
 
+.arrow-button-1:hover {
+  background-color: var(--color-primary-light);
+  transition: background-color 0.3s ease;
+  border-color: var(--color-white);
+}
+
 .arrow-button-1 svg {
   fill: var(--color-primary-dark);
+}
+
+.arrow-button-1:hover svg {
+  fill: var(--color-white);
+  transition: fill 0.3s ease;
 }
 
 .format_card {
@@ -424,7 +446,7 @@ header {
       rgba(1, 28, 68, 0.73) 82.66%,
       #011c44 99.06%
     ),
-    url(../img/image\ 1580.png);
+    url(../img/image\ 1580.png) no-repeat;
 }
 
 .injections {
@@ -436,7 +458,7 @@ header {
       rgba(1, 28, 68, 0.73) 82.66%,
       #011c44 99.06%
     ),
-    url(../img/image\ 1570.png);
+    url(../img/image\ 1570.png) no-repeat;
 }
 
 .clean {
@@ -448,7 +470,7 @@ header {
       rgba(1, 28, 68, 0.73) 82.66%,
       #011c44 99.06%
     ),
-    url(../img/image\ 1574.png);
+    url(../img/image\ 1574.png) no-repeat;
 }
 
 .format-card_txt {
