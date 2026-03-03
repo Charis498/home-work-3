@@ -407,7 +407,7 @@ header {
   height: 44px;
   border-radius: 50%;
   background-color: var(--color-white);
-  border-color: var(--color-primary-dark);
+  border: 2px solid var(--color-primary-dark);
 }
 
 .arrow-button:hover {
@@ -433,7 +433,7 @@ header {
   height: 44px;
   border-radius: 50%;
   background-color: var(--color-white);
-  border-color: var(--color-primary-dark);
+  border: 2px solid var(--color-primary-dark);
   rotate: 180deg;
 }
 
@@ -565,6 +565,7 @@ h3 span {
   background-color: transparent;
   font-size: 13px;
   color: var(--color-white);
+  border: 2px solid var(--color-white);
 }
 
 .btn_details {
@@ -730,6 +731,7 @@ h3 span {
   font-size: 13px;
   color: var(--color-white);
   margin-top: 24px;
+  border: 2px solid var(--color-white);
 }
 
 .modal_btn {
