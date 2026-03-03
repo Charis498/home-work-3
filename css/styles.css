@@ -6,10 +6,6 @@
     url("fonts/Roboto-Regular.woff") format("ttf");
   font-weight: 400;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
   src:
     url("fonts/Roboto-SemiBold.woff2") format("ttf"),
     url("fonts/Roboto-SemiBold.woff") format("ttf");
@@ -78,11 +74,13 @@ img {
   width: 100%;
   height: 106px;
 }
-f .container {
+
+.container {
   max-width: 1288px;
   margin: 0 auto;
   padding: 0 24px;
-  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 header {
@@ -93,43 +91,67 @@ header {
 
 .navigation {
   display: flex;
-  padding: 0 101px 32px 101px;
   justify-content: center;
+  padding-top: 32px;
 }
 
-.navigation .logo {
+.logo {
   font-size: 22px;
   font-weight: 700;
   color: var(--color-primary-light);
 }
 
-.navigation .menu {
+.menu {
   display: flex;
   align-items: center;
   flex-grow: 1;
   justify-content: center;
-  padding: 0 240px;
 }
 
-.navigation .menu ul {
-  list-style: none;
+.menu ul {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 56px;
+  box-sizing: border-box;
 }
 
-.navigation .menu ul li {
-  display: inline-block;
+.menu ul li {
+  display: flex;
+  align-items: center;
   font-size: 18px;
   font-weight: 700;
+  min-width: 120px;
+  white-space: nowrap;
+  justify-content: center;
 }
 
-.navigation .menu ul li a {
+.menu ul li:nth-child(1) {
+  width: 67px;
+  height: 21px;
+}
+
+.menu ul li:nth-child(2) {
+  width: 73px;
+  height: 21px;
+}
+
+.menu ul li:nth-child(3) {
+  width: 137px;
+  height: 21px;
+}
+
+.menu ul li:nth-child(4) {
+  width: 80px;
+  height: 21px;
+}
+
+.menu ul li a {
   color: var(--color-primary-dark);
+  padding: 0 16px;
 }
 
-.navigation .menu ul li a:hover {
+.menu ul li a:hover {
   color: var(--color-primary-light);
   transition: color 0.3s ease;
 }
@@ -150,8 +172,8 @@ header {
 }
 
 .hero {
-  padding: 123px 0 0 205px;
-  background-image:
+  padding: 123px 0 0 106px;
+  background:
     linear-gradient(
       89.38deg,
       #ffffff 30.62%,
@@ -172,11 +194,12 @@ header {
   background-position-y: 40px;
   background-repeat: repeat-x;
   background-size: 2000px 200px;
+  width: 1185px;
+  height: 200px;
 }
 
 .hero-info {
   width: 530px;
-  padding-left: 122px;
 }
 
 .hero-info h2 {
@@ -222,7 +245,6 @@ header {
 
 .reincarnation {
   position: relative;
-  margin-top: 113px;
   display: flex;
   justify-content: center;
   gap: 32px;
@@ -384,7 +406,8 @@ header {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: transparent;
+  background-color: var(--color-white);
+  border-color: var(--color-primary-dark);
 }
 
 .arrow-button:hover {
@@ -409,7 +432,8 @@ header {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: transparent;
+  background-color: var(--color-white);
+  border-color: var(--color-primary-dark);
   rotate: 180deg;
 }
 
@@ -491,6 +515,7 @@ iframe {
   text-align: center;
   color: var(--color-primary-dark);
   padding-top: 96px;
+  margin-bottom: 48px;
 }
 
 h2 span {
@@ -571,7 +596,7 @@ h3 span {
 
 .footer {
   margin-top: 96px;
-  padding: 56px 100px;
+  padding: 56px 0;
   background:
     url(../img/PhotoRoom\ 1.svg) bottom right no-repeat,
     url(../img/background_footer.svg) var(--color-primary-dark);
@@ -589,7 +614,7 @@ h3 span {
 
 .footer-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 186px;
   max-width: 1288px;
   margin: 0 auto;
@@ -602,8 +627,6 @@ h3 span {
   justify-content: flex-start;
   flex-direction: column;
   gap: 16px;
-  width: 203px;
-  height: 124px;
 }
 
 .footer-social ul {
@@ -641,8 +664,6 @@ h3 span {
   justify-content: flex-start;
   flex-direction: column;
   gap: 16px;
-  width: 203px;
-  height: 50px;
   color: var(--color-white);
 }
 
